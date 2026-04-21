@@ -1,0 +1,261 @@
+/* ------------------------------
+   Basic Reset
+   সব element-এর size calculation সহজ করার জন্য
+-------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+/* font set */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&display=swap');
+/* ------------------------------
+   Body Styling
+   পুরো page center করার জন্য
+-------------------------------- */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #134e4a);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans Bengali", sans-serif;
+}
+/* ------------------------------
+   Outer Page Wrapper
+-------------------------------- */
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------------
+   Main Calculator Card
+-------------------------------- */
+.calculator-card {
+  width: 100%;
+  max-width: 430px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
+}
+
+/* ------------------------------
+   Header Section
+-------------------------------- */
+.header-area {
+  text-align: center;
+  margin-bottom: 18px;
+  font-family: "Hind Siliguri", sans-serif;;
+}
+
+.header-area h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #0f172a;
+}
+.extra_color{
+  color: #a00000;
+}
+.subtitle {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* ------------------------------
+   Information Box
+   Nisab + short description
+-------------------------------- */
+.info-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #0f766e;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.info-box h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.info-box p {
+  margin: 0 0 10px 0;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.info-box ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.info-box li {
+  margin-bottom: 8px;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.info-box strong {
+  color: #0f766e;
+}
+
+.note {
+  background-color: #ecfeff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* ------------------------------
+   Display Box
+   Result দেখানোর জায়গা
+-------------------------------- */
+.cal_display {
+  background-color: #0f172a;
+  border-radius: 14px;
+  padding: 18px 14px;
+  min-height: 90px;
+  margin-bottom: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#result {
+  margin: 0;
+  color: #22c55e;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+/* ------------------------------
+   Input Area
+-------------------------------- */
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-area label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* input box */
+input {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+/* input focus effect */
+input:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+}
+
+/* ------------------------------
+   Button Styling
+-------------------------------- */
+button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(20, 184, 166, 0.25);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ------------------------------
+   Footer Text
+-------------------------------- */
+.footer-text {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.footer-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ------------------------------
+   Mobile Responsive
+-------------------------------- */
+@media (max-width: 480px) {
+  body {
+    padding: 14px;
+  }
+
+  .calculator-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .header-area h1 {
+    font-size: 23px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .info-box h2 {
+    font-size: 16px;
+  }
+
+  .info-box p,
+  .info-box li {
+    font-size: 13px;
+  }
+
+  #result {
+    font-size: 18px;
+  }
+
+  .input-area label {
+    font-size: 14px;
+  }
+
+  input,
+  button {
+    font-size: 15px;
+  }
+}

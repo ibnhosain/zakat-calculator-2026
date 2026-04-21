@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <!-- বাংলা লেখা সঠিকভাবে দেখানোর জন্য -->
+  <meta charset="UTF-8" />
+
+  <!-- মোবাইলে responsive করার জন্য -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ব্রাউজার ট্যাবে দেখাবে -->
+  <title>Zakat Calculator 2026</title>
+
+  <!-- CSS file যুক্ত করা -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- পুরো page এর main wrapper -->
+  <div class="page-wrapper">
+
+    <!-- calculator card -->
+    <div class="calculator-card">
+
+      <!-- Header section -->
+      <div class="header-area">
+        <h1><span class="extra_color">১৪৪৭ হি,মোতাবেক ২০২৬ ইং</span> সনে যাকাতের হিসাব</h1>
+        <p class="subtitle">
+        বর্তমান বাজার মূল্য অনুযায়ী সাড়ে বায়ান্ন ভরি রূপার মূল্য হিসেবে যাকাত-ফিতরার নেসাব ২,৩০,০০০/-(দুই লক্ষ ত্রিশ হাজার টাকা)
+        </p>
+      </div>
+
+      <!-- Short description / info area -->
+      <!-- <div class="info-box">
+        <h2>সংক্ষিপ্ত বিবরণ</h2>
+
+        <p>
+          যাকাত ফরজ হওয়ার জন্য আপনার যাকাতযোগ্য মোট সম্পদ ন্যূনতম
+          <strong>নিসাব</strong> পরিমাণে পৌঁছাতে হবে এবং সাধারণভাবে
+          তা এক চান্দ্র বছর পূর্ণ থাকতে হবে।
+        </p>
+
+        <p>
+          এই ক্যালকুলেটরে <strong>শুধু ২০২৬ সালের fixed nisab</strong>
+          ব্যবহার করা হয়েছে।
+        </p>
+
+        <ul>
+          <li><strong>২০২৬ নিসাব:</strong> ৳214,326</li>
+          <li><strong>যাকাতের হার:</strong> ২.৫%</li>
+          <li><strong>হিসাবের ধরন:</strong> মোট যাকাতযোগ্য সম্পদের উপর</li>
+        </ul>
+
+        <p class="note">
+          নোট: এই ভার্সনটি ২০২৬ সালের জন্য hardcoded করা হয়েছে। অন্য বছরের
+          জন্য এই মান পরিবর্তন করতে হবে।
+        </p>
+      </div> -->
+
+      <!-- Result display box -->
+      <div class="cal_display">
+        <!-- JS এই id ব্যবহার করবে -->
+        <p id="result">আপনার যাকাতের ফলাফল এখানে দেখাবে</p>
+      </div>
+
+      <!-- Input section -->
+      <div class="input-area">
+
+        <!-- label -->
+        <label for="zakatAmount">
+          আপনার মোট যাকাতযোগ্য সম্পদের পরিমাণ লিখুন (টাকায়):
+        </label>
+
+        <!-- input field -->
+        <!-- এই id অবশ্যই ঠিক রাখতে হবে, কারণ JS এখানে কাজ করবে -->
+        <input
+          type="number"
+          id="zakatAmount"
+          placeholder="উদাহরণ: 500000"
+        />
+
+        <!-- action button -->
+        <button onclick="zakatCalculte()" class="btn">
+          যাকাত হিসাব করুন
+        </button>
+      </div>
+
+      <!-- Footer note -->
+      <div class="footer-text">
+        <p>
+          এই ক্যালকুলেটরটি কেবল ২০২৬ সালের নিসাব  ভিত্তিক একটি সহায়ক tool।
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JS file যুক্ত করা -->
+  <script src="app.js"></script>
+</body>
+</html>
